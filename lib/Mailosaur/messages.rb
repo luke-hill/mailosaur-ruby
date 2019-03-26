@@ -23,7 +23,7 @@ module Mailosaur
     #
     def get(id)
       response = conn.get 'api/messages/' + id
-      
+
       unless response.status == 200
         error_model = JSON.load(response.body)
         mailosaur_error = Mailosaur::MailosaurError.new('Operation returned an invalid status code \'' + response.status.to_s + '\'', error_model)
@@ -75,7 +75,7 @@ module Mailosaur
       url += items_per_page ? '&itemsPerPage=' + items_per_page : ''
 
       response = conn.get url
-      
+
       unless response.status == 200
         error_model = JSON.load(response.body)
         mailosaur_error = Mailosaur::MailosaurError.new('Operation returned an invalid status code \'' + response.status.to_s + '\'', error_model)
@@ -127,9 +127,9 @@ module Mailosaur
       url = 'api/messages/search?server=' + server
       url += page ? '&page=' + page : ''
       url += items_per_page ? '&itemsPerPage=' + items_per_page : ''
-      
+
       response = conn.post url, criteria.to_json
-      
+
       unless response.status == 200
         error_model = JSON.load(response.body)
         mailosaur_error = Mailosaur::MailosaurError.new('Operation returned an invalid status code \'' + response.status.to_s + '\'', error_model)
@@ -154,7 +154,7 @@ module Mailosaur
     #
     def wait_for(server, criteria)
       response = conn.post 'api/messages/await?server=' + server, criteria.to_json
-      
+
       unless response.status == 200
         error_model = JSON.load(response.body)
         mailosaur_error = Mailosaur::MailosaurError.new('Operation returned an invalid status code \'' + response.status.to_s + '\'', error_model)

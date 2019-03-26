@@ -6,7 +6,7 @@ module Mailosaur
         @score = data['score']
       end
 
-       attr_accessor :spam_filter_results
+      attr_accessor :spam_filter_results
 
       # @return [Float]
       attr_accessor :score
