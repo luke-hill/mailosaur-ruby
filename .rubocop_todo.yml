@@ -37,7 +37,6 @@ Layout/IndentationWidth:
     - 'lib/Mailosaur/models/base_model.rb'
     - 'lib/Mailosaur/models/spam_analysis_result.rb'
     - 'lib/Mailosaur/version.rb'
-    - 'test/emails_test.rb'
     - 'test/files_test.rb'
     - 'test/mailer.rb'
     - 'test/servers_test.rb'
@@ -161,7 +160,6 @@ Style/GuardClause:
 # Configuration parameters: IgnoredMethods.
 Style/MethodCallWithoutArgsParentheses:
   Exclude:
-    - 'test/emails_test.rb'
     - 'test/files_test.rb'
     - 'test/servers_test.rb'
 
@@ -185,7 +183,6 @@ Style/RaiseArgs:
 # Configuration parameters: AllowAsExpressionSeparator.
 Style/Semicolon:
   Exclude:
-    - 'test/emails_test.rb'
     - 'test/files_test.rb'
 
 # Offense count: 76
@@ -197,7 +194,6 @@ Style/StringLiterals:
     - 'Gemfile'
     - 'Rakefile'
     - 'lib/Mailosaur/mailosaur_error.rb'
-    - 'test/emails_test.rb'
     - 'test/files_test.rb'
     - 'test/mailer.rb'
     - 'test/servers_test.rb'
